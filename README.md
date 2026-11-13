@@ -1,5 +1,7 @@
 # Tracecraft
 
+[![CI](https://github.com/Swakie35/tracecraft/actions/workflows/ci.yml/badge.svg)](https://github.com/Swakie35/tracecraft/actions/workflows/ci.yml)
+
 **A bounded telemetry collector that makes overload measurable.**
 
 Tracecraft explores a common backend trade-off: doing expensive metrics aggregation on the request thread increases latency, but an unbounded background queue can exhaust memory. This Java 21 service places a fixed-size queue between the ingestion endpoint and a virtual-thread consumer, and reports both processed events and dropped events.
